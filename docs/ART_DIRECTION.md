@@ -1,24 +1,42 @@
 # Art Direction
 
-**Status:** To be defined
+**Status:** Direction selected / Exact style still open
 
-این سند جهت بصری بازی را تعریف می‌کند.
-
-## Current Direction
+## Decided Direction
 - 2D
+- Main View: **Top-Down**
 - Friendly Industrial Cartoon
 - Colorful
 - Mobile-first readability
 - Simplified but recognizable industrial equipment
-- Minimal on-screen text
-- Short purposeful animations
-- Child-friendly presentation
+- Minimal text
+- Short animations
+- Child-friendly
+- Gas power plant construction context
 
-## Visual Goals
-- واضح بودن تجهیزات
-- حس پیشرفت در سایت نیروگاه
-- جذابیت برای گروه سنی 8 تا 12 سال
-- پرهیز از جزئیات واقع‌گرایانه بیش از حد
+## Why Top-Down
+نمای بالا باید بتواند:
+- سایت خالی ابتدای بازی را نشان دهد.
+- ساخت تدریجی نیروگاه را مرحله‌به‌مرحله نمایش دهد.
+- Progress Map و Gameplay را یکپارچه کند.
+- جرثقیل، کامیون، سازه و تجهیزات را خوانا نشان دهد.
+
+## HSE Visual Language
+- PPE واضح
+- علائم ایمنی ساده
+- محدوده خطر کودک‌فهم
+- Highlight برای Safe/Unsafe Choices
+
+## Character
+- شخصیت کودک با نسخه دختر/پسر
+- لباس و PPE قابل تشخیص
+
+## Open Art Questions
+- Exact illustration style
+- Character proportions
+- Color system
+- UI visual language
+- Degree of stylization
 
 ## Reference
 See: [PROJECT_SPEC.md](PROJECT_SPEC.md)
