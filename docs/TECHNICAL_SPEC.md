@@ -62,6 +62,31 @@ Exact validation method remains open.
 ## Security
 Do not include real plant layout, real control procedures, sensitive parameters or site security information.
 
+## AI-Assisted QA / Android Testing
+
+### Candidate Tool: Android-UI-Analyser (AUA)
+Repository: https://github.com/The-Wordlab/Android-UI-Analyser
+
+**Role in this project:** Candidate for AI-assisted Android UI testing and regression testing after the first playable APK is available.
+
+Potential uses:
+- Automated testing of menus, dialogs, buttons and navigation
+- Testing save/load and episode unlock flow
+- Testing character selection
+- Verifying expected Persian UI text
+- Re-running regression scenarios after AI-assisted/Vibe Coding changes
+- Allowing an AI agent to inspect and interact with the Android build through ADB
+
+Important limitation:
+- Godot gameplay elements implemented as sprites, custom Canvas/UI nodes, drag-and-drop interactions or non-standard accessibility elements may not appear reliably in the Android accessibility/view hierarchy.
+- In those cases AUA may need screenshot/vision/OCR fallback, which is less deterministic than structured UI inspection.
+
+**Decision:** Do not integrate AUA during the current design/asset phase. Re-evaluate it when the first playable Android APK exists and define a small automated QA suite at that point.
+
+**Current assessment:**
+- Game creation value: low (approximately 2/10)
+- Post-build Android QA value: high (approximately 8/10)
+
 ## Open Technical Topics
 - Exact Godot architecture
 - Save format details
