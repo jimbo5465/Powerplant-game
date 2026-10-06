@@ -59,6 +59,25 @@ Exact validation method remains open.
 - Reusable HSE guidance component
 - Shared Save/Progress Manager
 
+## AI-Assisted Development
+
+### Candidate: Godot MCP
+Use a Godot-compatible Model Context Protocol (MCP) integration to let an AI coding agent interact more directly with the Godot editor/project.
+
+Candidate implementations to evaluate:
+- triforge0/godot-mcp
+- elfensky/godot-mcp
+
+Potential uses:
+- Inspect scene tree and nodes
+- Create/edit nodes and scenes
+- Edit GDScript
+- Run scenes and inspect runtime/debug output
+- Capture screenshots or state for AI-assisted iteration
+- Reduce manual copy/paste between the AI agent and Godot
+
+**Decision:** Godot MCP is useful but not mandatory. Do not make the project architecture dependent on it. First stabilize the Godot version and initial project structure; then evaluate and connect one MCP implementation as a development-automation layer.
+
 ## Security
 Do not include real plant layout, real control procedures, sensitive parameters or site security information.
 
