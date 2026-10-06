@@ -59,6 +59,46 @@ Exact validation method remains open.
 - Reusable HSE guidance component
 - Shared Save/Progress Manager
 
+
+## AI Toolchain
+
+This project uses an explicit AI-assisted production chain so each tool has a defined responsibility and the workflow stays repeatable.
+
+### Core Pilot Toolchain
+- **ChatGPT** — game design, episode design, UX/HSE logic, prompts, technical decisions, documentation
+- **Nano Banana / Google Flow** — character, environment and game-art asset generation
+- **Codex** — GDScript, project structure, refactoring, debugging, repository changes
+- **Godot** — gameplay assembly, scenes, UI, animation, save/progress logic, Android build
+
+### Optional / Later-Phase Tools
+- **Flow / Veo** — short video-style cutscenes and transitions, not core interactive gameplay
+- **Godot MCP** — development automation layer between AI coding agents and Godot
+- **Gemini TTS / alternative TTS** — Persian voice-over generation
+- **Android-UI-Analyser (AUA) + ADB** — Android UI and regression testing after the first playable APK
+- **GitHub** — source control, project documentation and decision history
+
+### Toolchain Rule
+Do not introduce a new tool unless it solves a defined problem better than the existing stack. The toolchain is a controlled workflow, not a collection of tools.
+
+
+
+## Code Architecture Rule
+
+The codebase must remain **layered, modular and maintainable**.
+
+Required principles:
+- Do not concentrate all gameplay logic in one script or one oversized scene.
+- Separate responsibilities into focused scripts/components.
+- Keep gameplay logic, UI, persistence, audio, HSE guidance and level-specific logic decoupled where practical.
+- Prefer reusable components and small interfaces/signals over direct cross-dependencies.
+- Keep episode-specific code isolated so changing one episode does not unintentionally affect others.
+- Shared systems such as Save/Progress, Audio, HSE prompts and global state should live in clearly defined shared modules.
+- Avoid duplicated logic; extract shared behavior only when it is genuinely shared.
+- Refactoring for clarity is preferred over accumulating patches in a monolithic file.
+
+**Reason:** The project will be developed iteratively with AI assistance. Modular structure makes debugging, review, replacement and future changes faster and safer.
+
+
 ## AI-Assisted Development
 
 ### Candidate: Godot MCP
